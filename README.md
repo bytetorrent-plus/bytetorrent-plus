@@ -6,7 +6,7 @@
 
 ### Linux Version
 
-You need to go to the bytetrade website and create an account, then
+You need to go to the bytetrade website to create an account and enter the command:
 
     $ sudo docker run -itd --net=host -v /tmp/s1/run:/opt/run -e BTP_USERNAME=$userid -e BTP_PRIVATE=$priv_key -e BTP_CLIENT_PORT=7655 libtorrent/bytetorrent
 
