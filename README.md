@@ -5,7 +5,7 @@
 
 ### Windows Version
 
-Click to download the [Windows client](https://cdn2.bytetrade.io/bytetorrent/windows/bytetorrent-0.1.0-2019-8-24.zip?_blank), which provides download and seeding function. You can find the free torrent file of TED conferences on the ByteTorrent website, and start download to experience the product. Please visit the Help Center for [tutorials](https://bytetorrent.zendesk.com/hc/en-us/articles/360034522833-ByteTorrent-Plus-Windows-Tutorial?_blank).
+Click to download the [Windows client](https://cdn2.bytetrade.io/bytetorrent/windows/bytetorrent-0.1.1-2019-08-26.zip), which provides download and seeding function. You can find the free torrent file of TED conferences on the ByteTorrent website, and start download to experience the product. Please visit the Help Center for [tutorials](https://bytetorrent.zendesk.com/hc/en-us/articles/360034522833-ByteTorrent-Plus-Windows-Tutorial?_blank).
 
 ### Linux Version
 
