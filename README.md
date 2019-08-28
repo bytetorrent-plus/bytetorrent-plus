@@ -141,6 +141,11 @@ You can view result through `docker images`\
 You can find [bytetorrent-plus docker image](https://hub.docker.com/r/libtorrent/bytetorrent) on [Docker Hub](https://hub.docker.com/)
 
 ###### Start ByteTorrent-Plus
+Replace $path with the docker working path. 
+Replace $bytetrade_id with your ByteTrade Account ID.
+Replace $priv_key with the private key of your ByteTrade account.
+If you do not have a ByteTrade account yet, please refer to the Section 1 of this article about how to get one.
+
 ```
 sudo docker run -itd --net=host -v $path:/opt/run libtorrent/bytetorrent -f log -s download/
 -m torrent/ -i $bytetrade_id -p $priv_key -t http://18.140.32.93:16969/
