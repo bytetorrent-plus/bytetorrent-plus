@@ -200,13 +200,13 @@ At this time, you will see the status as Figure 1. It means that the server is w
 ###### How to download
 Make sure there is enough money in the account to copy the torrents to the torrent directory.
 ![queued_wait_payment_info](images/queued_wait_payment_info.png) *Figure 2*
-Figure 2 shows that fee is being paid.
+## Figure 2 shows that fee is being paid.
 
 ![downloading_not_started](images/downloading_not_started.png)*Figure 3*
-Figure 3 shows that payment is successful, ready to download.
+## Figure 3 shows that payment is successful, ready to download.
 
 ![downloading](images/downloading.png) *Figure 4*
-Figure 4 shows the download progress, press `i` and `Enter` to see which nodes to download from.
+## Figure 4 shows the download progress, press `i` and `Enter` to see which nodes to download from.
 
 ###### How to upload
 1. Copy the files to the save path directory in order, and then copy the Torrent to the torrent directory.
