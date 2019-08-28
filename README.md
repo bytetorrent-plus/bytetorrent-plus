@@ -141,9 +141,10 @@ You can view result through `docker images`\
 You can find [bytetorrent-plus docker image](https://hub.docker.com/r/libtorrent/bytetorrent) on [Docker Hub](https://hub.docker.com/)
 
 ###### Start ByteTorrent-Plus
-Replace $path with the docker working path. 
-Replace $bytetrade_id with your ByteTrade Account ID.
-Replace $priv_key with the private key of your ByteTrade account.
+When running the following script, you need to:
+* Replace $path with the docker working path. 
+* Replace $bytetrade_id with your ByteTrade Account ID.
+* Replace $priv_key with the private key of your ByteTrade account.
 If you do not have a ByteTrade account yet, please refer to the Section 1 of this article about how to get one.
 
 ```
