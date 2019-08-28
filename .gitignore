@@ -1,0 +1,9 @@
+err
+msg
+.vscode/
+*.o
+*.exe
+*.so
+*.a
+!lib/*.a
+.DS_Store
