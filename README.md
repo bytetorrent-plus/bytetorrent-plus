@@ -194,10 +194,8 @@ OPTIONS:
 ID=$(sudo docker run -itd --net=host libtorrent/bytetorrent-client 127.0.0.1 7654)
 sudo docker attach $ID
 ```
-At this time,
+At this time, you will see the status as the following figure. It means that the server is working properly, but there are no download and upload tasks yet.
 ![none](images/none.png)
-will be seen.
-It means that the server is working properly, but there are no download and upload tasks yet.
 
 ###### How to download
 Make sure there is enough money in the account to copy the torrents to the torrent directory.
