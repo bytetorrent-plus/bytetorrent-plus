@@ -6,7 +6,7 @@
 ### Background
 P2P download based on BitTorrent Protocol was once one of the most important applications on the Internet. But in the past practice, there are two problems that are difficult to solve：
 
-1. Copyright Infringement: the creator of the content cannot get paid
+1. Copyright Infringement: the Publisher of the content cannot get paid
 2. Leecher: most nodes only want to download and do not want to upload
 
 The ByteTorrent Protocol records all behaviors on the ByteTrade Content Blockchain and quantifies the upload and download of each Peer via the Proof of Transfer mechanism. The downloader pays the token, and the Publisher and Seeder of the content receives the token, which is an important upgrade to the BitTorrent Protocol.
@@ -17,7 +17,7 @@ About Torrent, you can read the metainfo files section of this [article](http://
 It's worth noting that the Torrent on the ByteTorrent blockchain does not need to specify Tracker information, it will use ByteTrade DHT Tracker.
 Unlike BitTorrent, after making Torrent, you need to post Torrent's info_hash to the ByteTrade chain to prove that you are the author of this content. At the same time you need to specify:
 
-1. Creator:  User name of the content creator on the ByteTrade network
+1. Publisher:  User name of the content Publisher on the ByteTrade network
 2. Amount:  The copyright fee that downloaders need to pay to download this content. In order to facilitate calculation, Amount needs to be a multiple of Piece.
 3. Percent:  It is the percentage of the publisher’s share of the copyright fee paid by downloaders. It's an integer between 0-10000, the default is 8000. We recommend using this value. It means that after a downloader downloads a video, he can earn back the cost of downloading the video by uploading another 5 copies, so this video is equivalent to be free for him.
 
