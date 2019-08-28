@@ -146,7 +146,7 @@ sudo docker run -itd --net=host -v $path:/opt/run libtorrent/bytetorrent -f log 
 -m torrent/ -i $bytetrade_id -p $priv_key -t http://18.140.32.93:16969/
 -u udp://18.140.32.93:12315/ -b http://p4.bytetrade.io:8080/
 ```
-Parameter    |  Explain
+Parameter    |  Explaination
 ------------ | -----------
 $path | the docker working path, which requires manual configuration
 -i |  bytetrade account id
@@ -201,9 +201,9 @@ It means that the server is working properly, but there are no download and uplo
 
 ###### How to download
 Make sure there is enough money in the account to copy the torrents to the torrent directory.
-![queued_wait_payment_info](images/queued_wait_payment_info.png) image means that fee is being paid.
-![downloading_not_started](images/downloading_not_started.png)image means that payment is successful, ready to download.
-![downloading](images/downloading.png) image means the download progress, press `i` and `Enter` to see which nodes to download from.
+![queued_wait_payment_info](images/queued_wait_payment_info.png) The above figure shows that fee is being paid.
+![downloading_not_started](images/downloading_not_started.png)The above figure shows that payment is successful, ready to download.
+![downloading](images/downloading.png) The above figure shows the download progress, press `i` and `Enter` to see which nodes to download from.
 
 ###### How to upload
 1. Copy the files to the save path directory in order, and then copy the Torrent to the torrent directory.
