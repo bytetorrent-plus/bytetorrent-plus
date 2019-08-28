@@ -194,19 +194,20 @@ OPTIONS:
 ID=$(sudo docker run -itd --net=host libtorrent/bytetorrent-client 127.0.0.1 7654)
 sudo docker attach $ID
 ```
-At this time, you will see the status as Figure 1. It means that the server is working properly, but there are no download and upload tasks yet.
-![none](images/none.png)*Figure 1*
+At this time, you will see the status as Fig.1. 
+![none](images/none.png)
+*Fig.1 shows that the server is working properly, but there are no download and upload tasks yet.*
 
 ###### How to download
 Make sure there is enough money in the account to copy the torrents to the torrent directory.
-![queued_wait_payment_info](images/queued_wait_payment_info.png) *Figure 2*
-## Figure 2 shows that fee is being paid.
+![queued_wait_payment_info](images/queued_wait_payment_info.png) 
+*Fig.2 shows that fee is being paid.*
 
-![downloading_not_started](images/downloading_not_started.png)*Figure 3*
-## Figure 3 shows that payment is successful, ready to download.
+![downloading_not_started](images/downloading_not_started.png)
+*Fig.3 shows that payment is successful, ready to download.*
 
-![downloading](images/downloading.png) *Figure 4*
-## Figure 4 shows the download progress, press `i` and `Enter` to see which nodes to download from.
+![downloading](images/downloading.png) 
+*Fig.4 shows the download progress, press `i` and `Enter` to see which nodes to download from.*
 
 ###### How to upload
 1. Copy the files to the save path directory in order, and then copy the Torrent to the torrent directory.
@@ -214,12 +215,12 @@ Make sure there is enough money in the account to copy the torrents to the torre
 3. Press `i` and `Enter` to see the peer information that has been connected and downloaded from.
 
 ###### How to delete task
-* Restart\
+* Method 1: Restart\
   Shut down program\
   Delete the infohash folder corresponding to `download/.resume`\
   Restart program
 
-* Use Client\
+* Method 2: Use Client\
   Connect to server through client, select task by pressing `up` and `down` keys, and then enter `D`.
 
 
