@@ -6,7 +6,7 @@
 ### Background
 P2P download based on BitTorrent Protocol was once one of the most important applications on the Internet. But in the past practice, there are two problems that are difficult to solve：
 
-1. Copyright Infringement: the creator of the content cannot get paid
+1. Copyright Infringement: the Publisher of the content cannot get paid
 2. Leecher: most nodes only want to download and do not want to upload
 
 The ByteTorrent Protocol records all behaviors on the ByteTrade Content Blockchain and quantifies the upload and download of each Peer via the Proof of Transfer mechanism. The downloader pays the token, and the Publisher and Seeder of the content receives the token, which is an important upgrade to the BitTorrent Protocol.
@@ -17,7 +17,7 @@ About Torrent, you can read the metainfo files section of this [article](http://
 It's worth noting that the Torrent on the ByteTorrent blockchain does not need to specify Tracker information, it will use ByteTrade DHT Tracker.
 Unlike BitTorrent, after making Torrent, you need to post Torrent's info_hash to the ByteTrade chain to prove that you are the author of this content. At the same time you need to specify:
 
-1. Creator:  User name of the content creator on the ByteTrade network
+1. Publisher:  User name of the content Publisher on the ByteTrade network
 2. Amount:  The copyright fee that downloaders need to pay to download this content. In order to facilitate calculation, Amount needs to be a multiple of Piece.
 3. Percent:  It is the percentage of the publisher’s share of the copyright fee paid by downloaders. It's an integer between 0-10000, the default is 8000. We recommend using this value. It means that after a downloader downloads a video, he can earn back the cost of downloading the video by uploading another 5 copies, so this video is equivalent to be free for him.
 
@@ -141,12 +141,18 @@ You can view result through `docker images`\
 You can find [bytetorrent-plus docker image](https://hub.docker.com/r/libtorrent/bytetorrent) on [Docker Hub](https://hub.docker.com/)
 
 ###### Start ByteTorrent-Plus
+When running the following script, you need to:
+* Replace $path with the docker working path. 
+* Replace $bytetrade_id with your ByteTrade Account ID.
+* Replace $priv_key with the private key of your ByteTrade account.
+If you do not have a ByteTrade account yet, please refer to the Section 1 of this article about how to get one.
+
 ```
 sudo docker run -itd --net=host -v $path:/opt/run libtorrent/bytetorrent -f log -s download/
 -m torrent/ -i $bytetrade_id -p $priv_key -t http://18.140.32.93:16969/
 -u udp://18.140.32.93:12315/ -b http://p4.bytetrade.io:8080/
 ```
-Parameter    |  Explain
+Parameter    |  Explanation
 ------------ | -----------
 $path | the docker working path, which requires manual configuration
 -i |  bytetrade account id
@@ -194,29 +200,34 @@ OPTIONS:
 ID=$(sudo docker run -itd --net=host libtorrent/bytetorrent-client 127.0.0.1 7654)
 sudo docker attach $ID
 ```
-At this time,
+At this time, you will see the status as Fig.1. 
 ![none](images/none.png)
-will be seen.
-It means that the server is working properly, but there are no download and upload tasks yet.
+*Fig.1 shows that the server is working properly, but there are no download and upload tasks yet.*
 
 ###### How to download
 Make sure there is enough money in the account to copy the torrents to the torrent directory.
-![queued_wait_payment_info](images/queued_wait_payment_info.png) image means that fee is being paid.
-![downloading_not_started](images/downloading_not_started.png)image means that payment is successful, ready to download.
-![downloading](images/downloading.png) image means the download progress, press `i` and `Enter` to see which nodes to download from.
+![queued_wait_payment_info](images/queued_wait_payment_info.png) 
+*Fig.2 shows that fee is being paid.*
+
+![downloading_not_started](images/downloading_not_started.png)
+*Fig.3 shows that payment is successful, ready to download.*
+
+![downloading](images/downloading.png) 
+*Fig.4 shows the download progress, press `i` and `Enter` to see which nodes to download from.*
 
 ###### How to upload
+*You need to follow these steps one by one. If not, you will have a download instead of upload.*
 1. Copy the files to the save path directory in order, and then copy the Torrent to the torrent directory.
 2. When viewed with client, it will enter the file checking status and then the seeding status.
 3. Press `i` and `Enter` to see the peer information that has been connected and downloaded from.
 
 ###### How to delete task
-* Restart\
+* Method 1: Restart\
   Shut down program\
   Delete the infohash folder corresponding to `download/.resume`\
   Restart program
 
-* Use Client\
+* Method 2: Use Client\
   Connect to server through client, select task by pressing `up` and `down` keys, and then enter `D`.
 
 
