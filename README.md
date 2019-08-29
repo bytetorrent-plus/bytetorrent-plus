@@ -147,7 +147,7 @@ When running the following script, you need to:
 * Replace $path with the docker working path.
 * Replace $bytetrade_id with your ByteTrade Account ID.
 * Replace $priv_key with the private key of your ByteTrade account.
-If you do not have a ByteTrade account yet, please refer to the Section 1 of this article about how to get one.
+If you do not have a ByteTrade account yet, please refer to the Section 1 of this [article](https://bytetorrent.zendesk.com/hc/en-us/articles/360034522833-ByteTorrent-Plus-Windows-Tutorial) about how to get one.
 
 ```
 sudo docker run -itd --net=host -v $path:/opt/run libtorrent/bytetorrent -f log -s download/
