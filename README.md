@@ -142,7 +142,7 @@ You can find [bytetorrent-plus docker image](https://hub.docker.com/r/libtorrent
 
 ###### Start ByteTorrent-Plus
 When running the following script, you need to:
-* Replace $path with the docker working path. 
+* Replace $path with the docker working path.
 * Replace $bytetrade_id with your ByteTrade Account ID.
 * Replace $priv_key with the private key of your ByteTrade account.
 If you do not have a ByteTrade account yet, please refer to the Section 1 of this article about how to get one.
@@ -200,19 +200,19 @@ OPTIONS:
 ID=$(sudo docker run -itd --net=host libtorrent/bytetorrent-client 127.0.0.1 7654)
 sudo docker attach $ID
 ```
-At this time, you will see the status as Fig.1. 
+At this time, you will see the status as Fig.1.
 ![none](images/none.png)
 *Fig.1 shows that the server is working properly, but there are no download and upload tasks yet.*
 
 ###### How to download
 Make sure there is enough money in the account to copy the torrents to the torrent directory.
-![queued_wait_payment_info](images/queued_wait_payment_info.png) 
+![queued_wait_payment_info](images/queued_wait_payment_info.png)
 *Fig.2 shows that fee is being paid.*
 
 ![downloading_not_started](images/downloading_not_started.png)
 *Fig.3 shows that payment is successful, ready to download.*
 
-![downloading](images/downloading.png) 
+![downloading](images/downloading.png)
 *Fig.4 shows the download progress, press `i` and `Enter` to see which nodes to download from.*
 
 ###### How to upload
@@ -220,6 +220,9 @@ Make sure there is enough money in the account to copy the torrents to the torre
 1. Copy the files to the save path directory in order, and then copy the Torrent to the torrent directory.
 2. When viewed with client, it will enter the file checking status and then the seeding status.
 3. Press `i` and `Enter` to see the peer information that has been connected and downloaded from.
+
+![seeding](images/seeding.png)
+*Fig.5 shows the seeding status.*
 
 ###### How to delete task
 * Method 1: Restart\
