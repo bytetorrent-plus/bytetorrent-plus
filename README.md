@@ -104,6 +104,8 @@ Network fee will be: 405.504 + 25.839 + 80.746875 / 0.99 * 0.01 = 5.172625 BTP
 Inviter E will get 5.172625 * 50% = 2.5863125 BTP
 After 1209600 blocks, Downloader D can redeem 566.2 - 517.2625 = 48.9375 BTP
 ```
+### How to get BTP?
+You could obtain BTP here: https://www.bytetrade.com/Trade.
 
 ### Others
 We strongly recommend the Publisher of Torrent to provide Seeder service for a while until there are enough Seeders.
@@ -122,7 +124,7 @@ Click to download the [Android client](https://play.google.com/store/apps/detail
 If you do not have a bytetrade account, please download bytetrade wallet - [ByteHub Android Client](https://play.google.com/store/apps/details?id=com.bytetrade.bytehub) firstly and register to get your bytetrade account.
 
 ##### iOS Version
-Will Coming Soon
+Coming Soon
 
 ##### Windows Version
 Click to download the [Windows client](https://cdn2.bytetrade.io/bytetorrent/windows/bytetorrent-v.0.1.2-2019-8-28.zip), which provides download and seeding function. You can find the free torrent file of TED conferences on the ByteTorrent website, and start download to experience the product. Please visit the Help Center for [tutorials](https://bytetorrent.zendesk.com/hc/en-us/articles/360034522833-ByteTorrent-Plus-Windows-Tutorial?_blank).
