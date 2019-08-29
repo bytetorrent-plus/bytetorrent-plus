@@ -219,9 +219,10 @@ Make sure there is enough money in the account to copy the torrents to the torre
 
 ###### How to upload
 *You need to follow these steps one by one. If not, you will have a download instead of upload.*
-1. Copy the files to the save path directory in order, and then copy the Torrent to the torrent directory.
-2. When viewed with client, it will enter the file checking status and then the seeding status.
-3. Press `i` and `Enter` to see the peer information that has been connected and downloaded from.
+1. Copy the files to the save path directory.
+2. Copy the Torrent to the torrent directory.
+3. When viewed with client, it will enter the file checking status and then the seeding status.
+4. Press `i` and `Enter` to see the peer information that has been connected and downloaded from.
 
 ![seeding](images/seeding.png)
 *Fig.5 shows the seeding status.*
