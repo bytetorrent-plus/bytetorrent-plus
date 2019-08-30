@@ -9,19 +9,20 @@
 3. [Downloading Torrents and Sharing Files](#downloading-torrents-and-sharing-files)
 4. [Structure of Receipt](#structure-of-receipt)
 5. [Network Fee Rate](#network-fee-rate)
-6. [How to get BTP?](#how-to-get-btp)
-7. [Others](#others)
-8. [Download](#download)
+6. [Example](#example)
+7. [How to get BTP?](#how-to-get-btp)
+8. [Others](#others)
+9. [Download](#download)
 
-    - 8.1 [Android Version](#android)
+    - 9.1 [Android Version](#android)
 
-    - 8.2 [iOS Version](#ios)
+    - 9.2 [iOS Version](#ios)
 
-    - 8.3 [Windows Version](#windows)
+    - 9.3 [Windows Version](#windows)
 
-    - 8.4 [Linux(Minner) Version](#linux)
+    - 9.4 [Linux(Minner) Version](#linux)
 
-9. [Where to Get Help](#help)
+10. [Where to Get Help](#help)
 
 
 
@@ -104,7 +105,7 @@ Piece Number | Network Fee Rate
 The maximum number of Piece is 16384.\
 In the Stage 1 phase, we will regularly return 50% of the network fee paid by the registered user to their inviters who invite them to join ByteTorrent.
 
-### Example
+## 6. Example<a name="example"></a>
 Publisher A is going to release a video with a size of 512M and he creates a Torrent. The size of each Piece is 1M, and the number of Piece is 512.\
 A set the price at 512 BTP for this video, and his share percentage is 80%.\
 User B and User C provide upload services for this video separately.\
@@ -126,10 +127,10 @@ Network fee will be: 405.504 + 25.839 + 80.746875 / 0.99 * 0.01 = 5.172625 BTP
 Inviter E will get 5.172625 * 50% = 2.5863125 BTP
 After 1209600 blocks, Downloader D can redeem 566.2 - 517.2625 = 48.9375 BTP
 ```
-## 6. How to get BTP?<a name="how-to-get-btp"></a>
+## 7. How to get BTP?<a name="how-to-get-btp"></a>
 You could obtain BTP here: https://www.bytetrade.com/Trade.
 
-## 7. Others<a name="others"></a>
+## 8. Others<a name="others"></a>
 We strongly recommend the Publisher of Torrent to provide Seeder service for a while until there are enough Seeders.
 
 We temporarily block the upload function from the mobile devices to prevent traffic waste and overheating issues. We will consider removing this restriction based on user feedback.
@@ -140,22 +141,22 @@ You can use the Windows client to do the same. However, considering the NAT pene
 We recommend Seeder renting a cloud server with a public IP address since compared to AWS, Digital Ocean, Vultr, it has significantly lower bandwidth costs.
 
 
-## 8. Download<a name="download"></a>
-### 8.1 Android Version<a name="android"></a>
+## 9. Download<a name="download"></a>
+### 9.1 Android Version<a name="android"></a>
 Click to download the [Android client](https://play.google.com/store/apps/details?id=app.bytetorrentplus.com.bytetorrentplus) from Google Play \
 If you do not have a bytetrade account, please download bytetrade wallet - [ByteHub Android Client](https://play.google.com/store/apps/details?id=com.bytetrade.bytehub) firstly and register to get your bytetrade account.
 
-### 8.2 iOS Version<a name="ios"></a>
+### 9.2 iOS Version<a name="ios"></a>
 Coming Soon
 
-### 8.3 Windows Version<a name="windows"></a>
+### 9.3 Windows Version<a name="windows"></a>
 Click to download the [Windows client](https://cdn2.bytetrade.io/bytetorrent/windows/bytetorrent-v.0.1.2-2019-8-28.zip), which provides download and seeding function. You can find the free torrent file of TED conferences on the ByteTorrent website, and start download to experience the product. Please visit the Help Center for [tutorials](https://bytetorrent.zendesk.com/hc/en-us/articles/360034522833-ByteTorrent-Plus-Windows-Tutorial?_blank).
 
-### 8.4 Linux(Miner) Version<a name="linux"></a>
-#### 8.4.1 Install Docker
+### 9.4 Linux(Miner) Version<a name="linux"></a>
+#### 9.4.1 Install Docker
 Please refer to this [doc](https://docs.docker.com/install/)
 
-#### 8.4.2 Install ByteTorrent-Plus
+#### 9.4.2 Install ByteTorrent-Plus
 
 ```
 docker pull libtorrent/bytetorrent
@@ -164,7 +165,7 @@ docker pull libtorrent/bytetorrent-client
 You can view result through `docker images`\
 You can find [bytetorrent-plus docker image](https://hub.docker.com/r/libtorrent/bytetorrent) on [Docker Hub](https://hub.docker.com/)
 
-#### 8.4.3 Start ByteTorrent-Plus
+#### 9.4.3 Start ByteTorrent-Plus
 When running the following script, you need to:
   - Replace $path with the docker working path.
   - Replace $bytetrade_id with your ByteTrade Account ID.
@@ -219,7 +220,7 @@ OPTIONS:
 
 ```
 
-####  8.4.4 View running status.
+####  9.4.4 View running status.
 ```
 ID=$(sudo docker run -itd --net=host libtorrent/bytetorrent-client 127.0.0.1 7654)
 sudo docker attach $ID
@@ -228,7 +229,7 @@ At this time, you will see the status as Fig.1.
 ![none](images/none.png)
 *Fig.1 shows that the server is working properly, but there are no download and upload tasks yet.*
 
-#### 8.4.5 How to download
+#### 9.4.5 How to download
 Make sure there is enough money in the account to copy the torrents to the torrent directory.
 ![queued_wait_payment_info](images/queued_wait_payment_info.png)
 *Fig.2 shows that fee is being paid.*
@@ -239,7 +240,7 @@ Make sure there is enough money in the account to copy the torrents to the torre
 ![downloading](images/downloading.png)
 *Fig.4 shows the download progress, press `i` and `Enter` to see which nodes to download from.*
 
-#### 8.4.6 How to upload
+#### 9.4.6 How to upload
 *You need to follow these steps one by one. If not, you will have a download instead of upload.*
 1. Copy the files to the save path directory.
 2. Copy the Torrent to the torrent directory.
@@ -249,7 +250,7 @@ Make sure there is enough money in the account to copy the torrents to the torre
 ![seeding](images/seeding.png)
 *Fig.5 shows the seeding status.*
 
-#### 8.4.7 How to delete task
+#### 9.4.7 How to delete task
 There are 2 methods to delete task.
   - Method 1: Restart\
   Shut down program\
@@ -260,7 +261,7 @@ There are 2 methods to delete task.
   Connect to server through client, select task by pressing `up` and `down` keys, and then enter `D`.
 
 
-## 9. Where To Get Help<a name="help"></a>
+## 10. Where To Get Help<a name="help"></a>
 * [Explorer](https://explorer.bytetrade.com/)
 * [Telegram](https://t.me/bytetorrentplus)
 * [Issues Tracker](https://github.com/bytetorrent-plus/bytetorrent-plus/issues)
