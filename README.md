@@ -13,13 +13,13 @@
 7. [Others](#others)
 8. [Download](#download)
 
-  8.1 [Android Version](#android)
+  - [Android Version](#android)
 
-  8.2 [iOS Version](#ios)
+  - [iOS Version](#ios)
 
-  8.3 [Windows Version](#windows)
+  - [Windows Version](#windows)
 
-  8.4 [Linux(Minner) Version](#linux)
+  - [Linux(Minner) Version](#linux)
 
 9. [Where to Get Help](#help)
 
@@ -151,11 +151,11 @@ Coming Soon
 ### Windows Version<a name="windows"></a>
 Click to download the [Windows client](https://cdn2.bytetrade.io/bytetorrent/windows/bytetorrent-v.0.1.2-2019-8-28.zip), which provides download and seeding function. You can find the free torrent file of TED conferences on the ByteTorrent website, and start download to experience the product. Please visit the Help Center for [tutorials](https://bytetorrent.zendesk.com/hc/en-us/articles/360034522833-ByteTorrent-Plus-Windows-Tutorial?_blank).
 
-### Linux(Minner) Version<a name="linux"></a>
-##### Install Docker
+### Linux(Miner) Version<a name="linux"></a>
+- #### Install Docker
 Please refer to this [doc](https://docs.docker.com/install/)
 
-##### Install ByteTorrent-Plus
+- #### Install ByteTorrent-Plus
 
 ```
 docker pull libtorrent/bytetorrent
@@ -164,11 +164,11 @@ docker pull libtorrent/bytetorrent-client
 You can view result through `docker images`\
 You can find [bytetorrent-plus docker image](https://hub.docker.com/r/libtorrent/bytetorrent) on [Docker Hub](https://hub.docker.com/)
 
-##### Start ByteTorrent-Plus
+- #### Start ByteTorrent-Plus
 When running the following script, you need to:
-* Replace $path with the docker working path.
-* Replace $bytetrade_id with your ByteTrade Account ID.
-* Replace $priv_key with the private key of your ByteTrade account.
+  - Replace $path with the docker working path.
+  - Replace $bytetrade_id with your ByteTrade Account ID.
+  - Replace $priv_key with the private key of your ByteTrade account.
 If you do not have a ByteTrade account yet, please refer to the Section 1 of this [article](https://bytetorrent.zendesk.com/hc/en-us/articles/360034522833-ByteTorrent-Plus-Windows-Tutorial) about how to get one.
 
 ```
@@ -219,7 +219,7 @@ OPTIONS:
 
 ```
 
-#####  View running status.
+- ####  View running status.
 ```
 ID=$(sudo docker run -itd --net=host libtorrent/bytetorrent-client 127.0.0.1 7654)
 sudo docker attach $ID
@@ -228,7 +228,7 @@ At this time, you will see the status as Fig.1.
 ![none](images/none.png)
 *Fig.1 shows that the server is working properly, but there are no download and upload tasks yet.*
 
-##### How to download
+- #### How to download
 Make sure there is enough money in the account to copy the torrents to the torrent directory.
 ![queued_wait_payment_info](images/queued_wait_payment_info.png)
 *Fig.2 shows that fee is being paid.*
@@ -239,7 +239,7 @@ Make sure there is enough money in the account to copy the torrents to the torre
 ![downloading](images/downloading.png)
 *Fig.4 shows the download progress, press `i` and `Enter` to see which nodes to download from.*
 
-##### How to upload
+- #### How to upload
 *You need to follow these steps one by one. If not, you will have a download instead of upload.*
 1. Copy the files to the save path directory.
 2. Copy the Torrent to the torrent directory.
@@ -249,13 +249,14 @@ Make sure there is enough money in the account to copy the torrents to the torre
 ![seeding](images/seeding.png)
 *Fig.5 shows the seeding status.*
 
-##### How to delete task
-* Method 1: Restart\
+- #### How to delete task
+There are 2 methods to delete task.
+  - Method 1: Restart\
   Shut down program\
   Delete the infohash folder corresponding to `download/.resume`\
   Restart program
 
-* Method 2: Use Client\
+  - Method 2: Use Client\
   Connect to server through client, select task by pressing `up` and `down` keys, and then enter `D`.
 
 
