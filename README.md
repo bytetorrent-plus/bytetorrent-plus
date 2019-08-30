@@ -3,7 +3,29 @@
 [bytetorrent-plus](https://github.com/bytetorrent-plus/bytetorrent-plus) is a new generation of bittorrent applications that are built on the [bytetrade blockchain](https://www.bytetrade.io/) and and [libtorrent](https://github.com/arvidn/libtorrent).
  It works on iOS, Android, OS X, Windows and Linux Server.
 
-### Background
+## Table of Contents
+1. [Background](#background)
+2. [Creating and Publishing Torrents](#creating-and-publishing-torrents)
+3. [Downloading Torrents and Sharing Files](#downloading-torrents-and-sharing-files)
+4. [Structure of Receipt](#structure-of-receipt)
+5. [Network Fee Rate](#network-fee-rate)
+6. [How to get BTP?](#how-to-get-btp)
+7. [Others](#others)
+8. [Download](#download)
+
+  8.1 [Android Version](#android)
+
+  8.2 [iOS Version](#ios)
+
+  8.3 [Windows Version](#windows)
+
+  8.4 [Linux(Minner) Version](#linux)
+
+9. [Where to Get Help](#help)
+
+
+
+## Background<a name="background"></a>
 P2P download based on BitTorrent Protocol was once one of the most important applications on the Internet. But in the past practice, there are two problems that are difficult to solve：
 
 1. Copyright Infringement: the Publisher of the content cannot get paid
@@ -11,7 +33,7 @@ P2P download based on BitTorrent Protocol was once one of the most important app
 
 The ByteTorrent Protocol records all behaviors on the ByteTrade Content Blockchain and quantifies the upload and download of each Peer via the Proof of Transfer mechanism. The downloader pays the token, and the Publisher and Seeder of the content receives the token, which is an important upgrade to the BitTorrent Protocol.
 
-### Creating and Publishing Torrents
+## Creating and Publishing Torrents <a name="creating-and-publishing-torrents"></a>
 About Torrent, you can read the metainfo files section of this [article](http://bittorrent.org/beps/bep_0003.html).
 
 It's worth noting that the Torrent on the ByteTorrent blockchain does not need to specify Tracker information, it will use ByteTrade DHT Tracker.
@@ -24,7 +46,7 @@ Unlike BitTorrent, after making Torrent, you need to post Torrent's info_hash to
 Now, Torrents can be created and submitted via the Windows Client. The Windows Client does not support submitting a copyright-free content. If you have special situations, you can contact our customer support for instructions.\
 Please note that before submitting the info_hash, you need to make sure you are the copyright owner of the content. The ByteTorrent Foundation does not assume any responsibility for a series of issues arising from copyright.
 
-### Downloading Torrents and Sharing Files
+## Downloading Torrents and Sharing Files<a name="downloading-torrents-and-sharing-files"></a>
 The downloader needs to deposit a fee to the network before downloading. The amount of deposit will usually be slightly higher than the actual amount to be consumed (some Pieces will be requested multiple times during the transmission). After the settlement period is completed, the user can redeem the remaining of the deposit. Deposit consists of two parts: the copyright fee and the bandwidth fee for the download.\
 The bandwidth fee represents the fee payable to the Seeder per 1 GB of data downloaded. Currently, the recommended value is 3BTP/GB
 
@@ -55,7 +77,7 @@ In general, the higher the bandwidth fee set by the downloader, the more people 
 3. After 1209600 blocks and Downloader has completed settlement, Downloader can redeem the remaining deposit
 4. After 1209600 blocks, Seeder can no longer receive any payment by providing the Receipt
 
-### Structure of Receipt
+## Structure of Receipt<a name="structure-of-receipt"></a>
 ```
 torrent_info_hash
 payment_id
@@ -65,7 +87,7 @@ piece_id
 SIGNATURE(...)
 ```
 
-### Network Fee Rate
+## Network Fee Rate<a name="network-fee-rate"></a>
 The copyright fee and the bandwidth fee will be charged by the witness nodes (network) at the time of settlement to cover the cost of storage and calculation.
 
 The percentage depends on the number of Torrent’s Piece Number:
@@ -104,10 +126,10 @@ Network fee will be: 405.504 + 25.839 + 80.746875 / 0.99 * 0.01 = 5.172625 BTP
 Inviter E will get 5.172625 * 50% = 2.5863125 BTP
 After 1209600 blocks, Downloader D can redeem 566.2 - 517.2625 = 48.9375 BTP
 ```
-### How to get BTP?
+## How to get BTP?<a name="how-to-get-btp"></a>
 You could obtain BTP here: https://www.bytetrade.com/Trade.
 
-### Others
+## Others<a name="others"></a>
 We strongly recommend the Publisher of Torrent to provide Seeder service for a while until there are enough Seeders.
 
 We temporarily block the upload function from the mobile devices to prevent traffic waste and overheating issues. We will consider removing this restriction based on user feedback.
@@ -118,22 +140,22 @@ You can use the Windows client to do the same. However, considering the NAT pene
 We recommend Seeder renting a cloud server with a public IP address since compared to AWS, Digital Ocean, Vultr, it has significantly lower bandwidth costs.
 
 
-### Download
-##### Android Version
+## Download<a name="download"></a>
+### Android Version<a name="android"></a>
 Click to download the [Android client](https://play.google.com/store/apps/details?id=app.bytetorrentplus.com.bytetorrentplus) from Google Play \
 If you do not have a bytetrade account, please download bytetrade wallet - [ByteHub Android Client](https://play.google.com/store/apps/details?id=com.bytetrade.bytehub) firstly and register to get your bytetrade account.
 
-##### iOS Version
+### iOS Version<a name="ios"></a>
 Coming Soon
 
-##### Windows Version
+### Windows Version<a name="windows"></a>
 Click to download the [Windows client](https://cdn2.bytetrade.io/bytetorrent/windows/bytetorrent-v.0.1.2-2019-8-28.zip), which provides download and seeding function. You can find the free torrent file of TED conferences on the ByteTorrent website, and start download to experience the product. Please visit the Help Center for [tutorials](https://bytetorrent.zendesk.com/hc/en-us/articles/360034522833-ByteTorrent-Plus-Windows-Tutorial?_blank).
 
-##### Linux(Minner) Version
-###### Install Docker
+### Linux(Minner) Version<a name="linux"></a>
+##### Install Docker
 Please refer to this [doc](https://docs.docker.com/install/)
 
-###### Install ByteTorrent-Plus
+##### Install ByteTorrent-Plus
 
 ```
 docker pull libtorrent/bytetorrent
@@ -142,7 +164,7 @@ docker pull libtorrent/bytetorrent-client
 You can view result through `docker images`\
 You can find [bytetorrent-plus docker image](https://hub.docker.com/r/libtorrent/bytetorrent) on [Docker Hub](https://hub.docker.com/)
 
-###### Start ByteTorrent-Plus
+##### Start ByteTorrent-Plus
 When running the following script, you need to:
 * Replace $path with the docker working path.
 * Replace $bytetrade_id with your ByteTrade Account ID.
@@ -197,7 +219,7 @@ OPTIONS:
 
 ```
 
-######  View running status.
+#####  View running status.
 ```
 ID=$(sudo docker run -itd --net=host libtorrent/bytetorrent-client 127.0.0.1 7654)
 sudo docker attach $ID
@@ -206,7 +228,7 @@ At this time, you will see the status as Fig.1.
 ![none](images/none.png)
 *Fig.1 shows that the server is working properly, but there are no download and upload tasks yet.*
 
-###### How to download
+##### How to download
 Make sure there is enough money in the account to copy the torrents to the torrent directory.
 ![queued_wait_payment_info](images/queued_wait_payment_info.png)
 *Fig.2 shows that fee is being paid.*
@@ -217,7 +239,7 @@ Make sure there is enough money in the account to copy the torrents to the torre
 ![downloading](images/downloading.png)
 *Fig.4 shows the download progress, press `i` and `Enter` to see which nodes to download from.*
 
-###### How to upload
+##### How to upload
 *You need to follow these steps one by one. If not, you will have a download instead of upload.*
 1. Copy the files to the save path directory.
 2. Copy the Torrent to the torrent directory.
@@ -227,7 +249,7 @@ Make sure there is enough money in the account to copy the torrents to the torre
 ![seeding](images/seeding.png)
 *Fig.5 shows the seeding status.*
 
-###### How to delete task
+##### How to delete task
 * Method 1: Restart\
   Shut down program\
   Delete the infohash folder corresponding to `download/.resume`\
@@ -237,7 +259,7 @@ Make sure there is enough money in the account to copy the torrents to the torre
   Connect to server through client, select task by pressing `up` and `down` keys, and then enter `D`.
 
 
-### Where To Get Help
+## Where To Get Help<a name="help"></a>
 * [Explorer](https://explorer.bytetrade.com/)
 * [Telegram](https://t.me/bytetorrentplus)
 * [Issues Tracker](https://github.com/bytetorrent-plus/bytetorrent-plus/issues)
