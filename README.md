@@ -251,12 +251,12 @@ Make sure there is enough money in the account to copy the torrents to the torre
 
 - #### How to delete task
 There are 2 methods to delete task.
-    - Method 1: Restart\
+  - Method 1: Restart\
   Shut down program\
   Delete the infohash folder corresponding to `download/.resume`\
   Restart program
 
-    - Method 2: Use Client\
+  - Method 2: Use Client\
   Connect to server through client, select task by pressing `up` and `down` keys, and then enter `D`.
 
 
