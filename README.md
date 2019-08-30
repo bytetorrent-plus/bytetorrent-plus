@@ -13,13 +13,13 @@
 7. [Others](#others)
 8. [Download](#download)
 
-  [8.1 Android Version](#android)
+  * 8.1 [Android Version](#android)
 
-  [8.2 iOS Version](#ios)
+  * 8.2 [iOS Version](#ios)
 
-  [8.3 Windows Version](#windows)
+  * 8.3 [Windows Version](#windows)
 
-  [8.4 Linux(Minner) Version](#linux)
+  * 8.4 [Linux(Minner) Version](#linux)
 
 9. [Where to Get Help](#help)
 
